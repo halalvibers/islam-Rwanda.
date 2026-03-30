@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hadith of the Day - Islam in Rwanda</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-green: #003314;
+            --deep-green: #001f0c;
+            --gold: #d4af37;
+            --gold-light: #f9e27b;
+            --text-white: #ffffff;
+        }
+
+        body {
+            margin: 0;
+            background-color: var(--primary-green);
+            color: var(--text-white);
+            font-family: 'Lato', sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* --- NAVIGATION --- */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 5%;
+            background: rgba(0, 31, 12, 0.95);
+            border-bottom: 2px solid var(--gold);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo { font-family: 'Cinzel', serif; color: var(--gold); font-weight: bold; font-size: 1.4rem; }
+        .nav-links { display: flex; list-style: none; gap: 25px; margin: 0; }
+        .nav-links a { color: var(--gold-light); text-decoration: none; font-size: 0.9rem; transition: 0.3s; }
+        .nav-links a:hover { color: var(--text-white); }
+
+        /* --- HADITH CARD SECTION --- */
+        .main-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        #hadith-card {
+            max-width: 600px;
+            width: 100%;
+            background: var(--deep-green);
+            border: 2px solid var(--gold);
+            border-radius: 15px;
+            padding: 50px 40px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.7);
+        }
+
+        /* Decorative Quote Icons */
+        #hadith-card::before {
+            content: '\f10d'; /* FontAwesome Quote Left */
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            color: rgba(212, 175, 55, 0.2);
+            font-size: 3rem;
+        }
+
+        .hadith-header {
+            font-family: 'Cinzel', serif;
+            color: var(--gold);
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+
+        #hadith-text {
+            font-family: 'Cinzel', serif;
+            font-size: 1.6rem;
+            line-height: 1.5;
+            color: var(--gold-light);
+            margin-bottom: 30px;
+            min-height: 100px;
+        }
+
+        #hadith-source {
+            display: block;
+            font-style: italic;
+            color: #bdc3c7;
+            font-size: 1rem;
+            border-top: 1px solid rgba(212, 175, 55, 0.3);
+            padding-top: 15px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #888;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">☪ ISLAM IN RWANDA</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a href="charity.html">Charity</a></li>
+            <li><a href="hadith.html" style="color: #fff; font-weight: bold;">Daily Hadith</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="main-container">
+        <article id="hadith-card">
+            <div class="hadith-header">Hadith of the Day</div>
+            <p id="hadith-text">Loading inspiration...</p>
+            <small id="hadith-source"></small>
+        </article>
+    </div>
+
+    <footer>
+        &copy; 2026 Islam in Rwanda. All Rights Reserved.
+    </footer>
+
+    <script>
+        // Array of Hadiths
+        const hadiths = [
+            {text: "Actions are judged by intentions.", source: "Sahih al-Bukhari 1:1"},
+            {text: "None of you truly believes until he loves for his brother what he loves for himself.", source: "Sahih al-Bukhari 13:6"},
+            {text: "The best among you are those who have the best manners and character.", source: "Sahih al-Bukhari"},
+            {text: "A strong believer is better and more beloved to Allah than a weak believer...", source: "Sahih Muslim 2664"},
+            {text: "The most beloved of deeds to Allah are those that are most consistent, even if they are small.", source: "Sahih al-Bukhari 6464"},
+            {text: "He who does not show mercy to others, will not be shown mercy.", source: "Sahih al-Bukhari 5997"}
+        ];
+
+        // Function to get today's Hadith
+        function getTodaysHadith() {
+            const date = new Date();
+            // This ensures a different index every day of the month
+            const index = date.getDate() % hadiths.length; 
+            return hadiths[index];
+        }
+
+        // Display Hadith on Page Load
+        window.onload = function() {
+            const todayHadith = getTodaysHadith();
+            document.getElementById("hadith-text").innerText = `"${todayHadith.text}"`;
+            document.getElementById("hadith-source").innerText = `— ${todayHadith.source}`;
+        };
+    </script>
+
+</body>
+</html>

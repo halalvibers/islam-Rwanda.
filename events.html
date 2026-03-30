@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - Islam in Rwanda</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-green: #003314;
+            --deep-green: #001f0c;
+            --gold: #d4af37;
+            --gold-light: #f9e27b;
+            --text-white: #ffffff;
+        }
+
+        body {
+            margin: 0;
+            background-color: var(--primary-green);
+            color: var(--text-white);
+            font-family: 'Lato', sans-serif;
+            line-height: 1.6;
+        }
+
+        /* --- NAVIGATION --- */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 5%;
+            background: rgba(0, 31, 12, 0.95);
+            border-bottom: 2px solid var(--gold);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo { font-family: 'Cinzel', serif; color: var(--gold); font-weight: bold; font-size: 1.4rem; }
+        .nav-links { display: flex; list-style: none; gap: 25px; margin: 0; }
+        .nav-links a { color: var(--gold-light); text-decoration: none; font-size: 0.9rem; transition: 0.3s; }
+        .nav-links a:hover { color: #fff; }
+
+        /* --- HERO --- */
+        .events-hero {
+            height: 35vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,31,12,0.8)), 
+                        url('https://images.unsplash.com/photo-1564104279-111197825227?q=80&w=1200');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .events-hero h1 { font-family: 'Cinzel', serif; color: var(--gold-light); font-size: 3rem; margin: 0; }
+        .events-hero p { font-style: italic; color: #ccc; max-width: 700px; padding: 0 20px; }
+
+        /* --- CONTENT SECTION --- */
+        .events-container {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .intro-text {
+            text-align: center;
+            margin-bottom: 60px;
+            font-size: 1.1rem;
+            color: #eee;
+        }
+
+        /* --- EVENT CARDS --- */
+        .event-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .event-card {
+            background: var(--deep-green);
+            border: 1px solid var(--gold);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .event-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(212, 175, 55, 0.2);
+        }
+
+        .event-header {
+            background: rgba(212, 175, 55, 0.1);
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .event-header i { color: var(--gold); font-size: 1.5rem; }
+        .event-header h3 { margin: 0; font-family: 'Cinzel', serif; color: var(--gold-light); font-size: 1.1rem; }
+
+        .event-body { padding: 25px; }
+        .event-body p { margin: 0; font-size: 0.95rem; color: #ddd; }
+
+        .tag-row {
+            margin-top: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag {
+            font-size: 0.7rem;
+            background: var(--primary-green);
+            color: var(--gold);
+            padding: 4px 10px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: var(--deep-green);
+            border-top: 1px solid var(--gold);
+            margin-top: 80px;
+            color: #888;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">☪ ISLAM IN RWANDA</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="events.html" style="color: #fff; font-weight: bold;">Events</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="events-hero">
+        <h1>EVENTS</h1>
+        <p>Strengthening faith, unity, and knowledge within the community.</p>
+    </header>
+
+    <main class="events-container">
+        <div class="intro-text">
+            The Events section of Islam in Rwanda highlights important Islamic activities and gatherings 
+            that take place within the Muslim community in Rwanda.
+        </div>
+
+        <div class="event-grid">
+            <div class="event-card">
+                <div class="event-header">
+                    <i class="fas fa-moon"></i>
+                    <h3>Ramadan Activities</h3>
+                </div>
+                <div class="event-body">
+                    <p>Community prayers (Taraweeh), Quran recitation, charity activities, and Iftar gatherings during the holy month.</p>
+                    <div class="tag-row">
+                        <span class="tag">Charity</span><span class="tag">Prayer</span><span class="tag">Unity</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="event-card">
+                <div class="event-header">
+                    <i class="fas fa-star-and-crescent"></i>
+                    <h3>Eid Celebrations</h3>
+                </div>
+                <div class="event-body">
+                    <p>Information about Eid al-Fitr and Eid al-Adha celebrations, including community prayers and social gatherings.</p>
+                    <div class="tag-row">
+                        <span class="tag">Eid Al-Fitr</span><span class="tag">Eid Al-Adha</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="event-card">
+                <div class="event-header">
+                    <i class="fas fa-microphone"></i>
+                    <h3>Lectures & Conferences</h3>
+                </div>
+                <div class="event-body">
+                    <p>Educational programs where scholars and speakers share knowledge about Islam and its deep teachings.</p>
+                    <div class="tag-row">
+                        <span class="tag">Education</span><span class="tag">Scholars</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="event-card">
+                <div class="event-header">
+                    <i class="fas fa-hands-holding-child"></i>
+                    <h3>Youth & Community</h3>
+                </div>
+                <div class="event-body">
+                    <p>Activities encouraging young Muslims to learn their faith, build character, and contribute to society.</p>
+                    <div class="tag-row">
+                        <span class="tag">Youth</span><span class="tag">Leadership</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="event-card">
+                <div class="event-header">
+                    <i class="fas fa-heart"></i>
+                    <h3>Charity & Service</h3>
+                </div>
+                <div class="event-body">
+                    <p>Programs supporting those in need through donations, volunteering, and social support initiatives.</p>
+                    <div class="tag-row">
+                        <span class="tag">Volunteering</span><span class="tag">Support</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <p style="text-align: center; margin-top: 60px; color: var(--gold-light); font-style: italic;">
+            Visitors are welcome to explore upcoming events and learn more about how Muslims in Rwanda celebrate and practice their faith together.
+        </p>
+    </main>
+
+    <footer>
+        &copy; 2026 Islam in Rwanda. All Rights Reserved.
+    </footer>
+
+</body>
+</html>

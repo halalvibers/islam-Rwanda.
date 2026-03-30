@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charity & Zakat - Islam in Rwanda</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-green: #003314;
+            --deep-green: #001f0c;
+            --gold: #d4af37;
+            --gold-light: #f9e27b;
+            --text-white: #ffffff;
+        }
+
+        body {
+            margin: 0;
+            background-color: var(--primary-green);
+            color: var(--text-white);
+            font-family: 'Lato', sans-serif;
+            line-height: 1.8;
+        }
+
+        /* --- NAVIGATION --- */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 5%;
+            background: rgba(0, 31, 12, 0.95);
+            border-bottom: 2px solid var(--gold);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo { font-family: 'Cinzel', serif; color: var(--gold); font-weight: bold; font-size: 1.4rem; }
+        .nav-links { display: flex; list-style: none; gap: 25px; margin: 0; }
+        .nav-links a { color: var(--gold-light); text-decoration: none; font-size: 0.9rem; transition: 0.3s; }
+        .nav-links a:hover { color: var(--text-white); }
+
+        /* --- CHARITY CONTENT SECTION --- */
+        .charity-section {
+            max-width: 850px;
+            margin: 60px auto;
+            padding: 50px;
+            background: var(--deep-green);
+            border: 1px solid var(--gold);
+            border-radius: 5px;
+            position: relative;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+        }
+
+        /* Decorative Star/Crescent Ornament */
+        .charity-section::before {
+            content: '☪';
+            position: absolute;
+            top: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--gold);
+            font-size: 1.8rem;
+        }
+
+        .charity-header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+            padding-bottom: 20px;
+        }
+
+        .charity-header h1 {
+            font-family: 'Cinzel', serif;
+            color: var(--gold-light);
+            font-size: 2.5rem;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        /* Content Styling */
+        .charity-body h3 {
+            font-family: 'Cinzel', serif;
+            color: var(--gold);
+            margin-top: 40px;
+            border-left: 3px solid var(--gold);
+            padding-left: 15px;
+        }
+
+        .charity-body p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            text-align: justify;
+            color: #eee;
+        }
+
+        /* Definition Boxes */
+        .definition-card {
+            background: rgba(212, 175, 55, 0.07);
+            border: 1px dashed rgba(212, 175, 55, 0.4);
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 8px;
+        }
+
+        .definition-card strong {
+            color: var(--gold-light);
+            font-family: 'Cinzel', serif;
+            font-size: 1.2rem;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        /* Rwanda List Styling */
+        .rwanda-impact {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .rwanda-impact li {
+            background: rgba(255, 255, 255, 0.03);
+            margin-bottom: 15px;
+            padding: 15px 20px;
+            border-radius: 4px;
+            border-left: 2px solid var(--gold);
+        }
+
+        .rwanda-impact li b {
+            color: var(--gold-light);
+        }
+
+        .footer-note {
+            text-align: center;
+            margin-top: 50px;
+            font-style: italic;
+            color: var(--gold);
+            font-size: 1rem;
+            font-family: 'Cinzel', serif;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #888;
+            font-size: 0.8rem;
+        }
+
+        /* Icon styling */
+        .main-icon {
+            text-align: center;
+            color: var(--gold);
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">☪ ISLAM IN RWANDA</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a href="charity.html" style="color: #fff; font-weight: bold;">Charity</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <article class="charity-section">
+        <header class="charity-header">
+            <div class="main-icon"><i class="fas fa-hand-holding-heart"></i></div>
+            <h1>Charity & Zakat</h1>
+        </header>
+
+        <div class="charity-body">
+            <p>
+                In Islam, charity is a central value, and giving to those in need is both a duty and a means to support community development. This practice purifies the soul and ensures social balance.
+            </p>
+
+            <div class="definition-card">
+                <strong>📌 Zakat</strong>
+                Zakat is one of the Five Pillars of Islam, an obligatory form of charity that requires eligible Muslims to give 2.5% of their annual savings to help the poor and needy. This act supports social justice by providing aid to those who most need assistance.
+            </div>
+
+            <div class="definition-card">
+                <strong>📌 Sadaqah</strong>
+                Unlike Zakat, Sadaqah is voluntary charity, given at any time and in any amount. It includes acts of kindness such as feeding the hungry, helping the sick, or supporting community programs.
+            </div>
+
+            <h3>Islamic Charity in Rwanda</h3>
+            <p>
+                Across Rwanda, Muslim organizations and community groups are actively supporting people in need through both Zakat funds and charitable projects:
+            </p>
+
+            <ul class="rwanda-impact">
+                <li>
+                    <b>Health & Insurance Support:</b> Organizations like <b>Al-Amal Rwanda</b> help provide health insurance and healthcare services to vulnerable families across various districts.
+                </li>
+                <li>
+                    <b>Humanitarian Assistance:</b> International Muslim charities, such as the <b>Zakat Foundation of America</b>, distribute Ramadan food baskets, clean water access, sponsor orphans, and build school infrastructure.
+                </li>
+            </ul>
+
+            <p>
+                These charitable efforts help ease poverty, improve wellbeing, and contribute to national development by ensuring that vulnerable families receive the support and education needed for a better future.
+            </p>
+        </div>
+
+        <div class="footer-note">
+            "The best of people are those that bring most benefit to the rest of mankind."
+        </div>
+    </article>
+
+    <footer>
+        &copy; 2026 Islam in Rwanda. All Rights Reserved.
+    </footer>
+
+</body>
+</html>

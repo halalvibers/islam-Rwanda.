@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infrastructures - Islam in Rwanda</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-green: #003314;
+            --deep-green: #001f0c;
+            --gold: #d4af37;
+            --gold-light: #f9e27b;
+            --text-white: #ffffff;
+        }
+
+        body {
+            margin: 0;
+            background-color: var(--primary-green);
+            color: var(--text-white);
+            font-family: 'Lato', sans-serif;
+            line-height: 1.7;
+        }
+
+        /* --- NAVIGATION --- */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 5%;
+            background: rgba(0, 31, 12, 0.95);
+            border-bottom: 2px solid var(--gold);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo { font-family: 'Cinzel', serif; color: var(--gold); font-weight: bold; font-size: 1.4rem; }
+        .nav-links { display: flex; list-style: none; gap: 20px; margin: 0; }
+        .nav-links a { color: var(--gold-light); text-decoration: none; font-size: 0.85rem; transition: 0.3s; }
+        .nav-links a:hover { color: #fff; }
+
+        /* --- HERO --- */
+        .infra-hero {
+            height: 35vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,31,12,0.8)), 
+                        url('image/mosque.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .infra-hero h1 { font-family: 'Cinzel', serif; color: var(--gold-light); font-size: 2.8rem; margin: 0; }
+
+        /* --- CONTENT --- */
+        .container {
+            max-width: 1100px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .intro-section {
+            text-align: center;
+            margin-bottom: 50px;
+            background: rgba(0, 31, 12, 0.5);
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        /* --- GRID LAYOUT --- */
+        .infra-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .infra-box {
+            background: var(--deep-green);
+            border: 1px solid var(--gold);
+            padding: 30px;
+            border-radius: 12px;
+            transition: 0.3s;
+            position: relative;
+        }
+
+        .infra-box:hover {
+            transform: translateY(-5px);
+            background: rgba(212, 175, 55, 0.05);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .infra-box i {
+            color: var(--gold);
+            font-size: 2rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .infra-box h3 {
+            font-family: 'Cinzel', serif;
+            color: var(--gold-light);
+            margin-top: 0;
+            font-size: 1.2rem;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            padding-bottom: 10px;
+        }
+
+        .infra-box p {
+            font-size: 0.95rem;
+            color: #ccc;
+        }
+
+        footer { text-align: center; padding: 40px; color: #888; font-size: 0.8rem; border-top: 1px solid var(--gold); margin-top: 60px; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">☪ ISLAM IN RWANDA</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a href="leaders&community.html">Leaders</a></li>
+            <li><a href="infrastructure.html" style="color: #fff; font-weight: bold;">Infrastructures</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="infra-hero">
+        <h1>Our Infrastructures</h1>
+    </header>
+
+    <main class="container">
+        <div class="intro-section">
+            <p>The Muslim community in Rwanda has established a wide range of infrastructures that support faith, education, health, and social development. These infrastructures reflect the community’s commitment to improving the lives of Muslims and Rwandans in general.</p>
+        </div>
+
+        <div class="infra-grid">
+            <div class="infra-box">
+                <i class="fas fa-mosque"></i>
+                <h3>Mosques</h3>
+                <p>Central to Islamic life, hosting daily prayers and community events. Prominent examples include the <strong>Nyamirambo Grand Mosque</strong> and <strong>Amahoro Mosque</strong> in Kigali.</p>
+            </div>
+
+            <div class="infra-box">
+                <i class="fas fa-school"></i>
+                <h3>Schools & Madrasas</h3>
+                <p>Providing education in the Qur’an, Islamic law, and Arabic, alongside secular subjects to prepare students for broader opportunities.</p>
+            </div>
+
+            <div class="infra-box">
+                <i class="fas fa-hand-holding-medical"></i>
+                <h3>Health Centers</h3>
+                <p>Islamic organizations run clinics to provide affordable healthcare and raise awareness about hygiene and preventive care.</p>
+            </div>
+
+            <div class="infra-box">
+                <i class="fas fa-store"></i>
+                <h3>Markets & Businesses</h3>
+                <p>Muslim-owned shops and businesses contribute to Rwanda’s economy, offering halal goods and services for all.</p>
+            </div>
+
+            <div class="infra-box">
+                <i class="fas fa-users"></i>
+                <h3>Community Centers</h3>
+                <p>Spaces for youth programs, interfaith dialogues, and social support initiatives for those in need.</p>
+            </div>
+
+            <div class="infra-box">
+                <i class="fas fa-book-reader"></i>
+                <h3>Other Facilities</h3>
+                <p>Including libraries, meeting halls, and training centers for skill development and social activities.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>&copy; 2026 Islam in Rwanda. All Rights Reserved.</footer>
+
+</body>
+</html>

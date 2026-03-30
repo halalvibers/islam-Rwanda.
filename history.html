@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History - Islam in Rwanda</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-green: #003314;
+            --deep-green: #001f0c;
+            --gold: #d4af37;
+            --gold-light: #f9e27b;
+            --text-white: #ffffff;
+        }
+
+        body {
+            margin: 0;
+            background-color: var(--primary-green);
+            color: var(--text-white);
+            font-family: 'Lato', sans-serif;
+            line-height: 1.8;
+        }
+
+        /* --- NAVIGATION --- */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 5%;
+            background: rgba(0, 31, 12, 0.95);
+            border-bottom: 2px solid var(--gold);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo { font-family: 'Cinzel', serif; color: var(--gold); font-weight: bold; font-size: 1.4rem; }
+        .nav-links { display: flex; list-style: none; gap: 25px; margin: 0; }
+        .nav-links a { color: var(--gold-light); text-decoration: none; font-size: 0.9rem; transition: 0.3s; }
+
+        /* --- HISTORY CONTENT --- */
+        .history-section {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 40px;
+            background: var(--deep-green);
+            border: 1px solid var(--gold);
+            border-radius: 5px;
+            position: relative;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+        }
+
+        /* Decorative Corner Ornaments */
+        .history-section::before {
+            content: '☪';
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--gold);
+            font-size: 1.5rem;
+        }
+
+        .history-header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+            padding-bottom: 20px;
+        }
+
+        .history-header h1 {
+            font-family: 'Cinzel', serif;
+            color: var(--gold-light);
+            font-size: 2.2rem;
+            margin: 0;
+        }
+
+        .history-body p {
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            text-align: justify;
+            color: #eee;
+        }
+
+        .highlight-card {
+            background: rgba(212, 175, 55, 0.1);
+            border-left: 4px solid var(--gold);
+            padding: 20px;
+            margin: 30px 0;
+            font-family: 'Cinzel', serif;
+            color: var(--gold-light);
+            text-align: center;
+        }
+
+        .footer-note {
+            text-align: center;
+            margin-top: 50px;
+            font-style: italic;
+            color: var(--gold);
+            font-size: 0.9rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #888;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">☪ ISLAM IN RWANDA</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="history.html" style="color: #fff; font-weight: bold;">History</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <article class="history-section">
+        <header class="history-header">
+            <h1>History of Islam in Rwanda</h1>
+        </header>
+
+        <div class="history-body">
+            <p>
+                Islam arrived in Rwanda in the late 19th and early 20th centuries through **Arab and Swahili Muslim traders** from the East African coast, especially Zanzibar and Tanzania. These traders introduced Islamic teachings 
+                while doing business in the region.
+            </p>
+
+            <div class="highlight-card">
+                The First Mosque: Al-Fatah Mosque (Built in 1913, located in Nyamirambo in Kigali)
+            </div>
+
+            <p>
+                Later, Muslim merchants and clerks from East Africa and the Indian subcontinent also settled in Rwanda 
+                and married local people, helping the religion grow. The building of the **Al-Fatah Mosque in 1913** marked the beginning of an organized Muslim community in the country.
+            </p>
+
+            <p>
+                Islam spread gradually through trade, cultural interaction, and peaceful conversion, becoming a 
+                significant part of Rwanda’s religious landscape. Today, it stands as a testament to a long history 
+                of faith and community development.
+            </p>
+        </div>
+
+        <div class="footer-note">
+            "A journey of faith, trade, and unity."
+        </div>
+    </article>
+
+    <footer>
+        &copy; 2026 Islam in Rwanda. All Rights Reserved.
+    </footer>
+
+</body>
+</html>
