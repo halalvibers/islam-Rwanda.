@@ -3,9 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leaders & Community - Islam in Rwanda</title>
+    
+    <title>Leaders & Community - Islam Rwanda</title>
+    <meta name="description" content="Meet the leaders of the Rwanda Muslim Community (RMC), including Grand Mufti Sheikh Musa Sindayigaya. Learn about the scholars and imams guiding faith in Rwanda.">
+    
+    <meta property="og:site_name" content="Islam Rwanda">
+    <meta property="og:title" content="Leadership & Scholars - Islam Rwanda">
+    <meta property="og:url" content="https://halalvibers.github.io/islam-Rwanda./leaders.html">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Discover the religious guidance and community leadership fostering unity and development within Rwanda's Muslim community.">
+
+    <meta name="google-site-verification" content="xW2dfAzjDEvTBF7K8veShiMS1npXoScRmTG1kKFBIoc" />
+
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <style>
         :root {
             --primary-green: #003314;
@@ -39,6 +51,7 @@
         .logo { font-family: 'Cinzel', serif; color: var(--gold); font-weight: bold; font-size: 1.4rem; }
         .nav-links { display: flex; list-style: none; gap: 25px; margin: 0; }
         .nav-links a { color: var(--gold-light); text-decoration: none; font-size: 0.9rem; transition: 0.3s; }
+        .nav-links a:hover { color: #fff; }
 
         /* --- HERO --- */
         .leaders-hero {
@@ -54,7 +67,7 @@
             border-bottom: 3px solid var(--gold);
         }
 
-        .leaders-hero h1 { font-family: 'Cinzel', serif; color: var(--gold-light); font-size: 2.5rem; letter-spacing: 2px; }
+        .leaders-hero h1 { font-family: 'Cinzel', serif; color: var(--gold-light); font-size: 2.5rem; letter-spacing: 2px; margin: 0; }
 
         /* --- CONTENT --- */
         .container {
@@ -70,57 +83,84 @@
             border-radius: 15px;
             margin-bottom: 50px;
             text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
         }
 
         /* --- LEADER PROFILES --- */
         .profile-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 30px;
         }
 
         .profile-card {
             background: rgba(0, 31, 12, 0.6);
             border: 1px solid rgba(212, 175, 55, 0.3);
-            border-radius: 10px;
-            padding: 30px;
+            border-radius: 12px;
+            padding: 35px;
             display: flex;
             flex-direction: column;
             gap: 15px;
-            transition: 0.3s;
+            transition: 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .profile-card::after {
+            content: '\f521'; /* Crown/Leadership icon */
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            bottom: -10px;
+            right: 10px;
+            font-size: 4rem;
+            color: rgba(212, 175, 55, 0.05);
         }
 
         .profile-card:hover {
             border-color: var(--gold);
             background: var(--deep-green);
+            transform: translateY(-5px);
         }
 
         .profile-card h2 {
             font-family: 'Cinzel', serif;
             color: var(--gold);
             margin: 0;
-            font-size: 1.3rem;
+            font-size: 1.4rem;
         }
 
         .role-tag {
+            background: rgba(212, 175, 55, 0.2);
             color: var(--gold-light);
             font-weight: bold;
-            font-size: 0.8rem;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
             text-transform: uppercase;
             letter-spacing: 1px;
+            align-self: flex-start;
         }
 
         .scholars-section {
             margin-top: 60px;
             background: rgba(212, 175, 55, 0.05);
-            padding: 40px;
+            padding: 45px;
             border-radius: 15px;
             border: 1px dashed var(--gold);
+            text-align: center;
         }
 
-        .scholars-section h3 { font-family: 'Cinzel', serif; color: var(--gold); text-align: center; }
+        .scholars-section h3 { font-family: 'Cinzel', serif; color: var(--gold); margin-bottom: 20px; font-size: 1.6rem; }
+        .scholars-section i { color: var(--gold); font-size: 2rem; margin-bottom: 15px; }
 
-        footer { text-align: center; padding: 40px; color: #888; font-size: 0.8rem; }
+        footer { text-align: center; padding: 40px; color: #888; font-size: 0.8rem; border-top: 1px solid var(--gold); background: var(--deep-green); }
+
+        /* Mobile View */
+        @media (max-width: 600px) {
+            .leaders-hero h1 { font-size: 1.8rem; }
+            .profile-grid { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 <body>
@@ -131,8 +171,9 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="aboutus.html">About Us</a></li>
             <li><a href="history.html">History</a></li>
-            <li><a href="leaders&community.html" style="color: #fff; font-weight: bold;">Leaders & Community</a></li>
-            <li><a href="events.html">Events</a></li>
+            <li><a href="leaders&community.html" style="color: #fff; font-weight: bold;">Leaders</a></li>
+            <li><a href="infrastructure.html">Infrastructures</a></li>
+            <li><a href="hadith.html">Daily Hadith</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
@@ -141,30 +182,31 @@
         <h1>Leaders & Community</h1>
     </header>
 
-    <div class="container">
+    <main class="container">
         <div class="intro-card">
-            <p>The Muslim community in Rwanda is guided by respected religious leaders and scholars who work to promote Islamic knowledge, unity, and social development. These leaders organize religious activities, provide guidance, and represent the community in national and international matters.</p>
+            <p>The Muslim community in Rwanda is guided by respected religious leaders and scholars who work to promote Islamic knowledge, unity, and social development. These leaders represent the community in national and international matters while fostering peace and cooperation.</p>
         </div>
 
         <div class="profile-grid">
             <div class="profile-card">
                 <span class="role-tag">Current Grand Mufti</span>
                 <h2>Sheikh Musa Sindayigaya</h2>
-                <p>Elected in May 2024 as the head of the Rwanda Muslim Community (RMC). He is responsible for leading Islamic affairs, promoting unity, and strengthening Islamic education and community development programs.</p>
+                <p>Elected in May 2024 as the head of the Rwanda Muslim Community (RMC). He leads Islamic affairs, focusing on promoting unity, strengthening Islamic education, and expanding community development programs nationwide.</p>
             </div>
 
             <div class="profile-card">
                 <span class="role-tag">Former Mufti</span>
                 <h2>Sheikh Salim Hitimana</h2>
-                <p>Contributed significantly to the growth of the community by helping expand Islamic institutions, including mosques and schools across the country.</p>
+                <p>Served the community by overseeing the expansion of key Islamic institutions. His leadership helped bridge gaps in infrastructure, ensuring more neighborhoods had access to mosques and schools.</p>
             </div>
         </div>
 
-        <div class="scholars-section">
+        <section class="scholars-section">
+            <i class="fas fa-users-cog"></i>
             <h3>Scholars, Imams & Teachers</h3>
-            <p>Leadership in Rwanda also includes scholars and imams who guide communities in mosques and schools. They teach the Qur’an and moral values while playing a vital role in charity work and interfaith dialogue. Through their guidance, the community continues to promote peace, cooperation, and national unity.</p>
-        </div>
-    </div>
+            <p>Our leadership extends to the dedicated scholars and imams in every mosque across Rwanda. They provide daily guidance, teach moral values to our youth, and facilitate interfaith dialogues that contribute to Rwanda's national unity. Through their service, they ensure that the values of charity, compassion, and peace remain at the heart of our community.</p>
+        </section>
+    </main>
 
     <footer>&copy; 2026 Islam in Rwanda. All Rights Reserved.</footer>
 
