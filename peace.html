@@ -3,9 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peace & Unity - Islam in Rwanda</title>
+    
+    <title>Peace & Unity - Islam Rwanda</title>
+    <meta name="description" content="Learn how the Muslim community in Rwanda promotes social cohesion, interfaith dialogue, and national reconciliation through Islamic ethical values.">
+    
+    <meta property="og:site_name" content="Islam Rwanda">
+    <meta property="og:title" content="Harmony & Peace - Islam Rwanda">
+    <meta property="og:url" content="https://halalvibers.github.io/islam-Rwanda./peace.html">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Fostering understanding and cooperation across all faiths for a unified Rwanda.">
+
+    <meta name="google-site-verification" content="xW2dfAzjDEvTBF7K8veShiMS1npXoScRmTG1kKFBIoc" />
+
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <style>
         :root {
             --primary-green: #003314;
@@ -31,7 +43,8 @@
         }
         .logo { font-family: 'Cinzel', serif; color: var(--gold); font-weight: bold; font-size: 1.4rem; }
         .nav-links { display: flex; list-style: none; gap: 20px; margin: 0; }
-        .nav-links a { color: var(--gold-light); text-decoration: none; font-size: 0.85rem; }
+        .nav-links a { color: var(--gold-light); text-decoration: none; font-size: 0.85rem; transition: 0.3s; }
+        .nav-links a:hover { color: #fff; }
 
         /* --- HERO --- */
         .peace-hero {
@@ -40,6 +53,7 @@
                         url('https://images.unsplash.com/photo-1577563908411-5077b6ac7a20?q=80&w=1200');
             background-size: cover; background-position: center;
             display: flex; justify-content: center; align-items: center; text-align: center;
+            border-bottom: 2px solid var(--gold);
         }
         .peace-hero h1 { font-family: 'Cinzel', serif; color: var(--gold-light); font-size: 2.8rem; margin: 0; letter-spacing: 3px; }
 
@@ -52,21 +66,28 @@
             gap: 40px;
             margin-bottom: 60px;
             background: rgba(255, 255, 255, 0.03);
-            padding: 30px;
+            padding: 40px;
             border-radius: 20px;
-            border-right: 3px solid var(--gold);
+            border-right: 4px solid var(--gold);
+            transition: 0.5s ease;
+            animation: fadeIn 1s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         .harmony-row:nth-child(even) {
             flex-direction: row-reverse;
             border-right: none;
-            border-left: 3px solid var(--gold);
+            border-left: 4px solid var(--gold);
         }
 
         .harmony-icon {
-            font-size: 3rem;
+            font-size: 3.5rem;
             color: var(--gold);
-            min-width: 80px;
+            min-width: 100px;
             text-align: center;
         }
 
@@ -74,31 +95,49 @@
             font-family: 'Cinzel', serif;
             color: var(--gold-light);
             margin-top: 0;
-            font-size: 1.5rem;
+            font-size: 1.6rem;
+            margin-bottom: 15px;
         }
 
+        .harmony-text p {
+            color: #ddd;
+            margin: 0;
+        }
+
+        /* --- QUOTE BANNER --- */
         .quote-banner {
             text-align: center;
-            padding: 50px;
+            padding: 60px 40px;
             background: var(--deep-green);
             border: 1px solid var(--gold);
             border-radius: 15px;
-            margin-top: 40px;
+            margin-top: 80px;
             position: relative;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
         .quote-banner i {
             position: absolute;
-            top: -20px;
+            top: -25px;
             left: 50%;
             transform: translateX(-50%);
             background: var(--primary-green);
-            padding: 0 15px;
+            padding: 10px 20px;
             color: var(--gold);
-            font-size: 2rem;
+            font-size: 2.5rem;
         }
 
-        footer { text-align: center; padding: 40px; color: #888; font-size: 0.8rem; border-top: 1px solid var(--gold); }
+        footer { text-align: center; padding: 40px; color: #888; font-size: 0.8rem; border-top: 1px solid var(--gold); background: var(--deep-green); }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .harmony-row, .harmony-row:nth-child(even) {
+                flex-direction: column;
+                text-align: center;
+                padding: 30px;
+            }
+            .peace-hero h1 { font-size: 2rem; }
+        }
     </style>
 </head>
 <body>
@@ -109,7 +148,10 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="aboutus.html">About Us</a></li>
             <li><a href="history.html">History</a></li>
+            <li><a href="leaders&community.html">Leaders</a></li>
+            <li><a href="infrastructure.html">Infrastructures</a></li>
             <li><a href="peace.html" style="color: #fff; font-weight: bold;">Peace & Unity</a></li>
+            <li><a href="hadith.html">Daily Hadith</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
@@ -119,7 +161,7 @@
     </header>
 
     <main class="container">
-        <p style="text-align: center; font-size: 1.2rem; margin-bottom: 60px; color: #ccc;">
+        <p style="text-align: center; font-size: 1.25rem; margin-bottom: 80px; color: #ccc; max-width: 800px; margin-left: auto; margin-right: auto;">
             The Muslim community in Rwanda actively promotes peace, social cohesion, and national unity through religious teachings, 
             community programs, and interfaith dialogue.
         </p>
@@ -128,7 +170,7 @@
             <div class="harmony-icon"><i class="fas fa-handshake"></i></div>
             <div class="harmony-text">
                 <h2>Interfaith Dialogue</h2>
-                <p>Muslim leaders and organizations engage with Christian, Protestant, and other religious communities to foster understanding, respect, and collaboration across faiths, ensuring a harmonious and inclusive society.</p>
+                <p>Muslim leaders and organizations engage with various religious communities to foster understanding, respect, and collaboration. By participating in national interfaith forums, we ensure a harmonious and inclusive society for all Rwandans.</p>
             </div>
         </div>
 
@@ -136,7 +178,7 @@
             <div class="harmony-icon"><i class="fas fa-bridge"></i></div>
             <div class="harmony-text">
                 <h2>Community & Charity</h2>
-                <p>Through charitable work, youth programs, and community initiatives, the Muslim community helps bridge social gaps, support the vulnerable, and encourage cooperation among all Rwandans.</p>
+                <p>Through charitable work and youth programs, the Muslim community helps bridge social gaps. Supporting the vulnerable is a core Islamic value that encourages cooperation and brotherhood among all citizens, regardless of background.</p>
             </div>
         </div>
 
@@ -144,13 +186,13 @@
             <div class="harmony-icon"><i class="fas fa-scale-balanced"></i></div>
             <div class="harmony-text">
                 <h2>Promoting Ethical Values</h2>
-                <p>Islamic teachings on honesty, compassion, tolerance, and justice guide Muslims to be responsible citizens, fostering peace and unity in families, neighborhoods, and the nation.</p>
+                <p>Islamic teachings on honesty, compassion, and justice guide Muslims to be responsible citizens. These values are essential for maintaining peace and unity in families, neighborhoods, and the entire nation.</p>
             </div>
         </div>
 
         <div class="quote-banner">
             <i class="fas fa-quote-left"></i>
-            <p style="font-size: 1.1rem; font-style: italic;">
+            <p style="font-size: 1.2rem; font-style: italic; line-height: 1.6;">
                 "By emphasizing education, service, and moral conduct, the Muslim community plays a vital role in Rwanda’s ongoing efforts toward national reconciliation and social harmony."
             </p>
         </div>
