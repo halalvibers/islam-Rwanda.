@@ -1,46 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <url>
     <loc>https://halalvibers.github.io/islam-Rwanda./index.html</loc>
-    <priority>1.00</priority>
+    <priority>1.0</priority>
   </url>
-  
   <url>
     <loc>https://halalvibers.github.io/islam-Rwanda./aboutus.html</loc>
-    <priority>0.80</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://halalvibers.github.io/islam-Rwanda./contact.html</loc>
-    <priority>0.80</priority>
+    <loc>https://halalvibers.github.io/islam-Rwanda./history.html</loc>
+    <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://halalvibers.github.io/islam-Rwanda./leaders&amp;community.html</loc>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://halalvibers.github.io/islam-Rwanda./history.html</loc>
-    <priority>0.80</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://halalvibers.github.io/islam-Rwanda./infrastructure.html</loc>
-    <priority>0.80</priority>
+    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://halalvibers.github.io/islam-Rwanda./charity.html</loc>
-    <priority>0.70</priority>
-  </url>
-  <url>
-    <loc>https://halalvibers.github.io/islam-Rwanda./events.html</loc>
-    <priority>0.70</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://halalvibers.github.io/islam-Rwanda./hadith.html</loc>
-    <priority>0.70</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://halalvibers.github.io/islam-Rwanda./holidays.html</loc>
-    <priority>0.70</priority>
+    <priority>0.7</priority>
   </url>
+
+  <url>
+    <loc>https://halalvibers.github.io/islam-Rwanda./literature.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://halalvibers.github.io/islam-Rwanda./values.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://halalvibers.github.io/islam-Rwanda./peace.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://halalvibers.github.io/islam-Rwanda./youth.html</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://halalvibers.github.io/islam-Rwanda./events.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://halalvibers.github.io/islam-Rwanda./contact.html</loc>
+    <priority>0.5</priority>
+  </url>
+
 </urlset>
