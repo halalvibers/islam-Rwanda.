@@ -3,9 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hadith of the Day - Islam in Rwanda</title>
+    
+    <title>Daily Hadith - Islam Rwanda</title>
+    <meta name="description" content="Get daily spiritual inspiration with authentic Hadiths. Explore the teachings of Prophet Muhammad (PBUH) on character, faith, and community.">
+    
+    <meta property="og:site_name" content="Islam Rwanda">
+    <meta property="og:title" content="Daily Hadith & Inspiration - Islam Rwanda">
+    <meta property="og:url" content="https://halalvibers.github.io/islam-Rwanda./hadith.html">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Start your day with a new Hadith from Sahih al-Bukhari and Sahih Muslim.">
+
+    <meta name="google-site-verification" content="xW2dfAzjDEvTBF7K8veShiMS1npXoScRmTG1kKFBIoc" />
+
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <style>
         :root {
             --primary-green: #003314;
@@ -23,6 +35,7 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
+            line-height: 1.6;
         }
 
         /* --- NAVIGATION --- */
@@ -49,16 +62,16 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 20px;
+            padding: 40px 20px;
         }
 
         #hadith-card {
-            max-width: 600px;
+            max-width: 650px;
             width: 100%;
             background: var(--deep-green);
             border: 2px solid var(--gold);
             border-radius: 15px;
-            padding: 50px 40px;
+            padding: 60px 40px;
             text-align: center;
             position: relative;
             box-shadow: 0 20px 50px rgba(0,0,0,0.7);
@@ -70,44 +83,55 @@
             font-family: 'Font Awesome 5 Free';
             font-weight: 900;
             position: absolute;
-            top: 20px;
-            left: 30px;
-            color: rgba(212, 175, 55, 0.2);
-            font-size: 3rem;
+            top: 25px;
+            left: 35px;
+            color: rgba(212, 175, 55, 0.15);
+            font-size: 3.5rem;
         }
 
         .hadith-header {
             font-family: 'Cinzel', serif;
             color: var(--gold);
-            font-size: 1.2rem;
-            letter-spacing: 2px;
-            margin-bottom: 30px;
+            font-size: 1.3rem;
+            letter-spacing: 3px;
+            margin-bottom: 35px;
             text-transform: uppercase;
         }
 
         #hadith-text {
             font-family: 'Cinzel', serif;
-            font-size: 1.6rem;
-            line-height: 1.5;
+            font-size: 1.7rem;
+            line-height: 1.6;
             color: var(--gold-light);
-            margin-bottom: 30px;
-            min-height: 100px;
+            margin-bottom: 35px;
+            min-height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         #hadith-source {
             display: block;
             font-style: italic;
             color: #bdc3c7;
-            font-size: 1rem;
+            font-size: 1.1rem;
             border-top: 1px solid rgba(212, 175, 55, 0.3);
-            padding-top: 15px;
+            padding-top: 20px;
         }
 
         footer {
             text-align: center;
             padding: 30px;
+            background: var(--deep-green);
+            border-top: 1px solid var(--gold);
             color: #888;
             font-size: 0.8rem;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 600px) {
+            #hadith-text { font-size: 1.3rem; }
+            #hadith-card { padding: 40px 20px; }
         }
     </style>
 </head>
@@ -138,25 +162,29 @@
     </footer>
 
     <script>
-        // Array of Hadiths
+        // Array of Hadiths - You can add as many as you want here!
         const hadiths = [
             {text: "Actions are judged by intentions.", source: "Sahih al-Bukhari 1:1"},
             {text: "None of you truly believes until he loves for his brother what he loves for himself.", source: "Sahih al-Bukhari 13:6"},
             {text: "The best among you are those who have the best manners and character.", source: "Sahih al-Bukhari"},
-            {text: "A strong believer is better and more beloved to Allah than a weak believer...", source: "Sahih Muslim 2664"},
+            {text: "A strong believer is better and more beloved to Allah than a weak believer.", source: "Sahih Muslim 2664"},
             {text: "The most beloved of deeds to Allah are those that are most consistent, even if they are small.", source: "Sahih al-Bukhari 6464"},
-            {text: "He who does not show mercy to others, will not be shown mercy.", source: "Sahih al-Bukhari 5997"}
+            {text: "He who does not show mercy to others, will not be shown mercy.", source: "Sahih al-Bukhari 5997"},
+            {text: "The best of you are those who are best to their families.", source: "Sunan al-Tirmidhi 3895"},
+            {text: "Kindness is a mark of faith, and whoever is not kind has no faith.", source: "Sahih Muslim"},
+            {text: "Seven people will be shaded by Allah on a Day when there is no shade except His... including a youth who grew up in the worship of Allah.", source: "Sahih al-Bukhari 660"}
         ];
 
-        // Function to get today's Hadith
+        // Function to select today's Hadith based on the calendar date
         function getTodaysHadith() {
             const date = new Date();
-            // This ensures a different index every day of the month
+            // Use the day of the month to pick an index
+            // The % ensures it loops back to 0 if the day is larger than the list size
             const index = date.getDate() % hadiths.length; 
             return hadiths[index];
         }
 
-        // Display Hadith on Page Load
+        // Apply the Hadith when the page finishes loading
         window.onload = function() {
             const todayHadith = getTodaysHadith();
             document.getElementById("hadith-text").innerText = `"${todayHadith.text}"`;
