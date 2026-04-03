@@ -3,10 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Values & Principles - Islam in Rwanda</title>
+    
+    <title>Values & Principles - Islam Rwanda</title>
+    <meta name="description" content="Explore the core ethical values of Islam in Rwanda, including Peace (Salaam), Integrity, and the Rwandan value of Ubumuntu (Humanity).">
+    
+    <meta property="og:site_name" content="Islam Rwanda">
+    <meta property="og:title" content="Ethical Values & Principles - Islam Rwanda">
+    <meta property="og:url" content="https://halalvibers.github.io/islam-Rwanda./values.html">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Guiding principles of compassion, honesty, and social harmony within the Rwandan Muslim community.">
+
+    <meta name="google-site-verification" content="xW2dfAzjDEvTBF7K8veShiMS1npXoScRmTG1kKFBIoc" />
+
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
         :root {
             --primary-green: #003314;
@@ -32,22 +43,24 @@
         }
         .logo { font-family: 'Cinzel', serif; color: var(--gold); font-weight: bold; font-size: 1.4rem; }
         .nav-links { display: flex; list-style: none; gap: 20px; margin: 0; }
-        .nav-links a { color: var(--gold-light); text-decoration: none; font-size: 0.85rem; }
+        .nav-links a { color: var(--gold-light); text-decoration: none; font-size: 0.85rem; transition: 0.3s; }
+        .nav-links a:hover { color: #fff; }
 
         /* --- HERO --- */
         .values-hero {
             height: 35vh;
             background: linear-gradient(rgba(0,0,0,0.7), rgba(0,31,12,0.9)), 
-                        url('image/openbible.jpg');
+                        url('image/openquran.jpg'); /* Changed from bible to match context */
             background-size: cover; background-position: center;
             display: flex; justify-content: center; align-items: center; text-align: center;
+            border-bottom: 3px solid var(--gold);
         }
         .values-hero h1 { font-family: 'Cinzel', serif; color: var(--gold-light); font-size: 2.8rem; margin: 0; letter-spacing: 2px; }
 
         .container { max-width: 1100px; margin: 60px auto; padding: 0 20px; }
 
         .intro-text {
-            text-align: center; font-size: 1.1rem; max-width: 800px; margin: 0 auto 60px auto; color: #ccc;
+            text-align: center; font-size: 1.15rem; max-width: 800px; margin: 0 auto 60px auto; color: #ccc;
         }
 
         /* --- VALUES GRID --- */
@@ -61,43 +74,61 @@
             background: var(--deep-green);
             border: 1px solid rgba(212, 175, 55, 0.3);
             border-radius: 20px;
-            padding: 40px 30px;
+            padding: 45px 30px;
             text-align: center;
-            transition: 0.4s;
+            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .value-card:hover {
             border-color: var(--gold);
-            transform: translateY(-10px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+            transform: translateY(-12px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
         }
 
         .icon-circle {
-            width: 80px; height: 80px;
-            background: rgba(212, 175, 55, 0.1);
+            width: 85px; height: 85px;
+            background: rgba(212, 175, 55, 0.08);
             border: 2px solid var(--gold);
             border-radius: 50%;
             display: flex; align-items: center; justify-content: center;
-            margin: 0 auto 25px auto;
-            font-size: 2rem; color: var(--gold-light);
+            margin-bottom: 25px;
+            font-size: 2.2rem; color: var(--gold-light);
+            transition: 0.3s;
         }
 
-        .value-card h2 { font-family: 'Cinzel', serif; color: var(--gold); margin-bottom: 15px; }
-        .value-card p { font-size: 0.95rem; color: #ddd; text-align: justify; }
+        .value-card:hover .icon-circle {
+            background: var(--gold);
+            color: var(--deep-green);
+        }
+
+        .value-card h2 { font-family: 'Cinzel', serif; color: var(--gold); margin-bottom: 15px; font-size: 1.5rem; }
+        .value-card p { font-size: 0.95rem; color: #ddd; text-align: center; margin: 0; }
 
         /* --- SUMMARY FOOTER --- */
         .summary-footer {
             margin-top: 80px;
             text-align: center;
-            padding: 40px;
-            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 50px 20px;
+            background: rgba(212, 175, 55, 0.05);
+            border-radius: 15px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
             font-family: 'Cinzel', serif;
             color: var(--gold-light);
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
+            font-size: 1.1rem;
         }
 
-        footer { text-align: center; padding: 40px; color: #888; font-size: 0.8rem; border-top: 1px solid var(--gold); }
+        footer { text-align: center; padding: 40px; color: #888; font-size: 0.8rem; border-top: 1px solid var(--gold); background: var(--deep-green); }
+
+        /* Mobile */
+        @media (max-width: 600px) {
+            .values-hero h1 { font-size: 1.8rem; }
+            .intro-text { font-size: 1rem; }
+        }
     </style>
 </head>
 <body>
@@ -108,7 +139,10 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="aboutus.html">About Us</a></li>
             <li><a href="history.html">History</a></li>
+            <li><a href="leaders&community.html">Leaders</a></li>
+            <li><a href="infrastructure.html">Infrastructures</a></li>
             <li><a href="values.html" style="color: #fff; font-weight: bold;">Values</a></li>
+            <li><a href="literature.html">Literature</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
@@ -126,7 +160,7 @@
             <div class="value-card">
                 <div class="icon-circle"><i class="fas fa-dove"></i></div>
                 <h2>Peace (Salaam)</h2>
-                <p>Rooted in the Arabic word <em>s-l-m</em>, peace in Islam means more than the absence of conflict. It is living in harmony with oneself and society through justice, compassion, and profound respect for human dignity.</p>
+                <p>Rooted in the Arabic word <em>s-l-m</em>, peace in Islam means more than the absence of conflict. It is living in harmony with oneself and society through justice, compassion, and respect for human dignity.</p>
             </div>
 
             <div class="value-card">
@@ -143,7 +177,7 @@
         </div>
 
         <div class="summary-footer">
-            Helping Muslims live in ways that benefit their families, communities, and the wider world.
+            "Helping Muslims live in ways that benefit their families, communities, and the wider world."
         </div>
     </main>
 
