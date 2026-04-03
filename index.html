@@ -22,214 +22,217 @@
     <meta property="og:type" content="website">
     <meta name="google-site-verification" content="xW2dfAzjDEvTBF7K8veShiMS1npXoScRmTG1kKFBIoc" />
 
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+<link rel="dns-prefetch" href="https://fonts.gstatic.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400&display=swap" rel="stylesheet" />
 
-    <style>
-        /* Your existing CSS stays here... */
-        :root {
-            --primary-green: #003314;
-            --deep-green: #001f0c;
-            --gold: #d4af37;
-            --gold-light: #f9e27b;
-            --text-white: #ffffff;
-        }
+   <style>
+    :root {
+        --primary-green: #003314;
+        --deep-green: #001f0c;
+        --gold: #d4af37;
+        --gold-light: #f9e27b;
+        --text-white: #ffffff;
+    }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
 
-        body {
-            background-color: var(--primary-green);
-            color: var(--text-white);
-            font-family: 'Lato', sans-serif;
-            overflow-x: hidden;
-            line-height: 1.6;
-        }
+    body {
+        background-color: var(--primary-green);
+        color: var(--text-white);
+        font-family: 'Lato', sans-serif;
+        overflow-x: hidden;
+        line-height: 1.6;
+    }
 
-        /* NAVIGATION */
+    /* NAVIGATION */
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 5%;
+        background: rgba(0, 31, 12, 0.98);
+        border-bottom: 2px solid var(--gold);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .logo {
+        font-family: 'Cinzel', serif;
+        color: var(--gold);
+        font-weight: bold;
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .nav-links {
+        display: flex;
+        list-style: none;
+        gap: 20px;
+    }
+
+    .nav-links li a {
+        text-decoration: none;
+        color: var(--gold-light);
+        font-size: 0.9rem;
+        transition: 0.3s;
+    }
+
+    .nav-links li a:hover { color: #fff; }
+
+    /* HERO SECTION */
+    .hero-section {
+        height: 60vh;
+        min-height: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 31, 20, 0.8)),
+                    url('image/quran.jpg') center/cover no-repeat;
+        padding: 0 20px;
+    }
+
+    .hero-section h1 {
+        font-family: 'Cinzel', serif;
+        font-size: clamp(1.5rem, 8vw, 3.5rem);
+        color: var(--gold-light);
+        background: rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(8px);
+        padding: 20px;
+        border-radius: 12px;
+        letter-spacing: 2px;
+        border: 1px solid rgba(212, 175, 55, 0.3);
+    }
+
+    .hero-section p {
+        font-style: italic;
+        font-size: clamp(1.1rem, 4vw, 1.2rem);
+        margin-top: 15px;
+        color: #eee;
+    }
+
+    /* GRID */
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 25px;
+        max-width: 1200px;
+        margin: -50px auto 60px;
+        padding: 0 20px;
+        position: relative;
+        z-index: 10;
+    }
+
+    .card {
+        background-color: var(--deep-green);
+        border: 2px solid var(--gold);
+        border-radius: 12px;
+        padding: 30px 20px;
+        text-align: center;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        transition: transform 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .card:hover {
+        transform: translateY(-10px);
+        border-color: var(--gold-light);
+    }
+
+    .card h3 {
+        font-family: 'Cinzel', serif;
+        color: var(--gold-light);
+        margin-bottom: 15px;
+        font-size: 1.2rem;
+    }
+
+    .card p {
+        font-size: 0.95rem;
+        margin-bottom: 20px;
+        color: #ddd;
+    }
+
+    .btn-small {
+        background: transparent;
+        color: var(--gold);
+        border: 1px solid var(--gold);
+        padding: 10px 20px;
+        text-decoration: none;
+        font-size: 0.8rem;
+        font-family: 'Cinzel', serif;
+        transition: 0.3s;
+        border-radius: 4px;
+        align-self: center;
+    }
+
+    .btn-small:hover {
+        background: var(--gold);
+        color: var(--deep-green);
+    }
+
+    #charity, #hadith, #socialLinks { grid-column: 1 / -1; }
+
+    #socialLinks {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    footer {
+        background-color: var(--deep-green);
+        padding: 30px;
+        text-align: center;
+        color: var(--gold-light);
+        border-top: 2px solid var(--gold);
+    }
+
+    /* ALL MOBILE ADJUSTMENTS - Grouped at the bottom */
+    @media (max-width: 768px) {
         nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 5%;
-            background: rgba(0, 31, 12, 0.98);
-            border-bottom: 2px solid var(--gold);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .logo {
-            font-family: 'Cinzel', serif;
-            color: var(--gold);
-            font-weight: bold;
-            font-size: 1.2rem;
-            letter-spacing: 1px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            flex-direction: column;
+            gap: 15px;
+            padding: 15px 20px;
         }
 
         .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 20px;
-        }
-
-        .nav-links li a {
-            text-decoration: none;
-            color: var(--gold-light);
-            font-size: 0.9rem;
-            transition: 0.3s;
-        }
-
-        .nav-links li a:hover {
-            color: #fff;
-        }
-
-        /* HERO SECTION */
-        .hero-section {
-            height: 60vh; /* Reduced for better mobile UX */
-            min-height: 400px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 31, 20, 0.8)),
-                        url('image/quran.jpg') center/cover no-repeat;
-            padding: 0 20px;
-        }
-
-        .hero-section h1 {
-            font-family: 'Cinzel', serif;
-            font-size: clamp(1.5rem, 8vw, 3.5rem);
-            color: var(--gold-light);
-            background: rgba(0, 0, 0, 0.4);
-            backdrop-filter: blur(8px);
-            padding: 20px;
-            border-radius: 12px;
-            letter-spacing: 2px;
-            border: 1px solid rgba(212, 175, 55, 0.3);
-        }
-
-        .hero-section p {
-            font-style: italic;
-            font-size: clamp(1rem, 4vw, 1.2rem);
-            margin-top: 15px;
-            color: #eee;
-        }
-
-        /* GRID */
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            max-width: 1200px;
-            margin: -50px auto 60px;
-            padding: 0 20px;
-            position: relative;
-            z-index: 10;
-        }
-
-        .card {
-            background-color: var(--deep-green);
-            border: 2px solid var(--gold);
-            border-radius: 12px;
-            padding: 30px 20px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-            transition: transform 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-            border-color: var(--gold-light);
-        }
-
-        .card h3 {
-            font-family: 'Cinzel', serif;
-            color: var(--gold-light);
-            margin-bottom: 15px;
-            font-size: 1.2rem;
-        }
-
-        .card p {
-            font-size: 0.95rem;
-            margin-bottom: 20px;
-            color: #ddd;
-        }
-
-        .btn-small {
-            background: transparent;
-            color: var(--gold);
-            border: 1px solid var(--gold);
-            padding: 10px 20px;
-            text-decoration: none;
-            font-size: 0.8rem;
-            font-family: 'Cinzel', serif;
-            transition: 0.3s;
-            border-radius: 4px;
-            align-self: center;
-        }
-
-        .btn-small:hover {
-            background: var(--gold);
-            color: var(--deep-green);
-        }
-
-        /* Special Wide Cards Logic */
-        #charity, #hadith, #socialLinks {
-            grid-column: 1 / -1; /* Spans full width on all screens */
-        }
-
-        #socialLinks {
-            display: flex;
-            flex-wrap: wrap;
+            width: 100%;
             justify-content: center;
             gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .grid-container {
+            grid-template-columns: 1fr;
             margin-top: 20px;
         }
 
-        /* MOBILE ADJUSTMENTS */
-        @media (max-width: 768px) {
-            nav {
-                flex-direction: column;
-                gap: 15px;
-                padding: 15px 20px;
-            }
-
-            .nav-links {
-                width: 100%;
-                justify-content: center;
-                gap: 15px;
-                flex-wrap: wrap;
-            }
-
-            .grid-container {
-                grid-template-columns: 1fr; /* Stack cards vertically on mobile */
-                margin-top: 20px;
-            }
-
-            .hero-section {
-                height: 50vh;
-            }
+        .hero-section {
+            height: 50vh;
+            /* Loading a smaller image for phones */
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 31, 20, 0.8)),
+                        url('image/quran-mobile.jpg') center/cover no-repeat;
         }
 
-        footer {
-            background-color: var(--deep-green);
-            padding: 30px;
-            text-align: center;
-            color: var(--gold-light);
-            border-top: 2px solid var(--gold);
+        .hero-section h1 {
+            backdrop-filter: none; /* Faster performance on mobile */
+            background: rgba(0, 0, 0, 0.8);
         }
-    </style>
+    }
+</style>
 </head>
 <body>
 
